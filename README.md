@@ -4,7 +4,15 @@
 
 > This template is Vue 2.0 compatible. For Vue 1.x use this command: `vue init webpack#1.0 my-project`
 
-> Includes Vuex for shared state and Vuetify theming
+# Inclusions
+
+In addition to the core capabilities from the forked version, this template extends the generator further by including many other much needed capabilities including the following;
+
+- Vuex for state management including modules
+- Vuetify theming with additional support for Stylus
+- Request-Promise for general promise capabilities
+- Provisions for micro-app architecture
+
 
 ## Documentation
 
