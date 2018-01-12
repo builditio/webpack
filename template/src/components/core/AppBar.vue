@@ -1,7 +1,7 @@
 <template>
 <v-toolbar color="blue darken-3" dark app clipped-left fixed>
   <v-toolbar-title :style="$vuetify.breakpoint.smAndUp ? 'width: 300px; min-width: 250px' : 'min-width: 72px'" class="ml-0 pl-3">
-    <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+    <v-toolbar-side-icon @click.stop="toggleNavigator"></v-toolbar-side-icon>
     <span class="hidden-xs-only">Application Title</span>
   </v-toolbar-title>
   <div class="d-flex align-center" style="margin-left: auto">
@@ -21,12 +21,30 @@
 </template>
 
 <script>
+import {
+  mapActions,
+  mapGetters
+} from 'vuex'
+import Snackbar from '@/helpers/snackbar'
+
 export default {
-  name: 'banner',
-  data () {
-    return {}
-  },
+  name: 'app-bar',
   methods: {
+    ...mapActions([
+      'toggleNavigator',
+      'toggleChooser',
+      'logOut'
+    ]),
+    signOut () {
+      this.logOut()
+      Snackbar.show('You have been successfully signed out!')
+    }
+  },
+  computed: {
+    ...mapGetters({
+      title: 'title',
+      theme: 'theme'
+    })
   }
 }
 </script>

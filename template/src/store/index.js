@@ -16,8 +16,7 @@ export default new Vuex.Store({
     layout,
     security,
     navigation,
-    notifications,
-    quote
+    notifications
   },
   strict: debug
 })

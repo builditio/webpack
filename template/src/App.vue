@@ -5,21 +5,22 @@
   <v-content>
     <router-view></router-view>
   </v-content>
+  <snackbar />
 </v-app>
 </template>
 
 <script>
-import Banner from './components/core/AppBar.vue'
+import AppBar from './components/core/AppBar.vue'
 import Navigator from './components/core/Navigator.vue'
+import Snackbar from './components/core/Snackbar.vue'
 
 export default {
   components: {
     AppBar,
-    Navigator
+    Navigator,
+    Snackbar
   },
   data: () => ({
-    dialog: false,
-    drawer: null
   }),
   props: {
     source: String
