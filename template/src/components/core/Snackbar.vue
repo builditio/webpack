@@ -2,7 +2,8 @@
   <v-snackbar
     bottom
     multi-line
-    v-model="isSnackbarVisible"
+    v-model="isSnackbarVisible",
+    :color='snackbarColor'
   >
     \{{ snackbarText }}
     <v-btn flat class="amber--text" @click.native.stop="hideSnackbar()">Close</v-btn>
@@ -28,7 +29,8 @@ export default {
   computed: {
     ...mapGetters({
       snackbarVisible: 'snackbarVisible',
-      snackbarText: 'snackbarText'
+      snackbarText: 'snackbarText',
+      snackbarColor: 'snackbarColor'
     }),
     isSnackbarVisible: {
       get () {

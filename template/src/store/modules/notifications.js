@@ -3,7 +3,8 @@ import * as types from '../mutation-types'
 // initial state
 const state = {
   snackbarVisible: false,
-  snackbarText: null
+  snackbarText: null,
+  snackbarColor: null
 }
 
 // getters
@@ -25,13 +26,15 @@ const actions = {
 
 // mutations
 const mutations = {
-  [types.SHOW_SNACKBAR] (state, value) {
-    state.snackbarText = value
+  [types.SHOW_SNACKBAR] (state, payload) {
+    state.snackbarText = payload.text
     state.snackbarVisible = true
+    state.snackbarColor = payload.color
   },
   [types.HIDE_SNACKBAR] (state) {
     state.snackbarText = null
     state.snackbarVisible = false
+    state.snackbarColor = null
   }
 }
 

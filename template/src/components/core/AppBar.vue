@@ -36,7 +36,7 @@ export default {
       'logOut'
     ]),
     sayHello () {
-      Snackbar.show('Well hello there, this is a snackbar!')
+      Snackbar.show({ text: 'Well hello there, this is a snackbar!', color: 'cyan'})
     }
   },
   computed: {
