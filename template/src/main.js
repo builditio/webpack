@@ -4,6 +4,8 @@
 {{/if_eq}}
 import Vue from 'vue'
 import App from './App'
+
+import store from './store'
 {{#router}}
 import router from './router'
 {{/router}}
@@ -22,6 +24,7 @@ new Vue({
   {{#router}}
   router,
   {{/router}}
+  store,
   {{#if_eq build "runtime"}}
   render: h => h(App)
   {{/if_eq}}
@@ -30,3 +33,5 @@ new Vue({
   template: '<App/>'
   {{/if_eq}}
 })
+
+export const $router = router
