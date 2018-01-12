@@ -1,7 +1,7 @@
 <template>
-<v-app id="inspire">
+<v-app>
+  <app-bar />
   <navigator />
-  <banner />
   <v-content>
     <router-view></router-view>
   </v-content>
@@ -9,12 +9,12 @@
 </template>
 
 <script>
-import Banner from './components/core/Banner.vue'
+import Banner from './components/core/AppBar.vue'
 import Navigator from './components/core/Navigator.vue'
 
 export default {
   components: {
-    Banner,
+    AppBar,
     Navigator
   },
   data: () => ({

@@ -1,5 +1,5 @@
 <template>
-<v-navigation-drawer fixed clipped app v-model="drawer">
+<v-navigation-drawer fixed clipped app v-model="visibility" @input="trackChange">
   <v-list style="padding-top: 10px">
 
     <!-- Menu option 1 -->
@@ -31,17 +31,43 @@
 </template>
 
 <script>
+import {
+  mapGetters,
+  mapActions
+} from 'vuex'
+
 export default {
   name: 'navigator',
   data () {
     return {
-      drawer: true,
       items: []
     }
   },
   methods: {
+    ...mapActions([
+      'closeNavigator',
+      'openSettings'
+    ]),
+    trackChange(e) {
+      if (this.navigatorVisible === true && e === false) {
+        this.closeNavigator()
+      }
+    },
     go () {
       console.log('go')
+    }
+  },
+  computed: {
+    ...mapGetters({
+      navigatorVisible: 'navigatorVisible'
+    }),
+    visibility: {
+      get () {
+        return this.navigatorVisible
+      },
+      set () {
+
+      }
     }
   }
 }
