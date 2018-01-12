@@ -12,7 +12,7 @@
       <v-icon>notifications</v-icon>
     </v-btn>
     <v-btn icon>
-      <v-avatar size="32px" tile>
+      <v-avatar size="24px" tile>
         <img src="https://vuetifyjs.com/static/doc-images/logo.svg" alt="Vuetify">
       </v-avatar>
     </v-btn>
