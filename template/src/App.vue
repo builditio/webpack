@@ -1,34 +1,33 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    {{#router}}
-    <router-view/>
-    {{else}}
-    <HelloWorld/>
-    {{/router}}
-  </div>
+<v-app id="inspire">
+  <navigator />
+  <banner />
+  <v-content>
+    <router-view></router-view>
+  </v-content>
+</v-app>
 </template>
 
 <script>
-{{#unless router}}
-import HelloWorld from './components/HelloWorld'
+import Banner from './components/core/Banner.vue'
+import Navigator from './components/core/Navigator.vue'
 
-{{/unless}}
 export default {
-  name: 'App'{{#router}}{{else}},
   components: {
-    HelloWorld
-  }{{/router}}
+    Banner,
+    Navigator
+  },
+  data: () => ({
+    dialog: false,
+    drawer: null
+  }),
+  props: {
+    source: String
+  },
+  methods: {
+    go: () => {
+
+    }
+  }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
