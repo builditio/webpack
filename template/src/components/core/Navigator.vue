@@ -3,7 +3,7 @@
   <v-list style="padding-top: 10px">
 
     <!-- Menu option 1 -->
-    <v-list-tile @click="go">
+    <v-list-tile @click="$router.push({name: 'SampleOne'})">
       <v-list-tile-action>
         <v-icon>dashboard</v-icon>
       </v-list-tile-action>
@@ -15,7 +15,7 @@
     </v-list-tile>
 
     <!-- Menu option 2 -->
-    <v-list-tile @click="go">
+    <v-list-tile @click="$router.push({name: 'SampleTwo'})">
       <v-list-tile-action>
         <v-icon>replay</v-icon>
       </v-list-tile-action>
@@ -52,9 +52,6 @@ export default {
       if (this.navigatorVisible === true && e === false) {
         this.closeNavigator()
       }
-    },
-    go () {
-      console.log('go')
     }
   },
   computed: {

@@ -4,7 +4,7 @@
     multi-line
     v-model="isSnackbarVisible"
   >
-    {{ snackbarText }}
+    \{{ snackbarText }}
     <v-btn flat class="amber--text" @click.native.stop="hideSnackbar()">Close</v-btn>
   </v-snackbar>
 </template>

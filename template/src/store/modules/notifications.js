@@ -9,7 +9,8 @@ const state = {
 // getters
 const getters = {
   snackbarVisible: state => state.snackbarVisible,
-  snackbarText: state => state.snackbarText
+  snackbarText: state => state.snackbarText,
+  snackbarColor: state => state.snackbarColor
 }
 
 // actions

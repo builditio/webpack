@@ -2,8 +2,8 @@ import * as types from '../mutation-types'
 
 // initial state
 const state = {
-  title: 'Quotes',
-  titleDefault: 'Quotes',
+  title: 'Application Title',
+  titleDefault: 'Application Title',
   theme: 'error'
 }
 
