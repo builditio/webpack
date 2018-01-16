@@ -1,7 +1,7 @@
 <template>
 <v-app>
-  <app-bar v-if="isLoggedIn" />
   <navigator  v-if="isLoggedIn" />
+  <app-bar v-if="isLoggedIn" />
   <v-content>
     <router-view></router-view>
   </v-content>

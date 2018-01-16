@@ -1,5 +1,5 @@
 <template>
-<v-navigation-drawer fixed clipped app v-model="visibility" @input="trackChange">
+<v-navigation-drawer fixed :clipped="$vuetify.breakpoint.width > 1264" app v-model="visibility" @input="trackChange" class="grey lighten-4">
   <v-list style="padding-top: 10px">
 
     <!-- Menu option 1 -->
@@ -69,3 +69,17 @@ export default {
   }
 }
 </script>
+
+<style>
+  #keep main .container {
+    height: 660px;
+  }
+
+  .navigation-drawer__border {
+    display: none;
+  }
+
+  .text {
+    font-weight: 400;
+  }
+</style>
