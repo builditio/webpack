@@ -21,15 +21,8 @@ export default {
     Navigator,
     Snackbar
   },
-  data: () => ({
-  }),
-  props: {
-    source: String
-  },
-  methods: {
-    go: () => {
-
-    }
+  data () {
+    return {}
   },
   computed: {
     ...mapGetters({
