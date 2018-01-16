@@ -5,7 +5,7 @@
       <v-card>
         <v-progress-linear :indeterminate="inProgress"></v-progress-linear>
         <div class="pt-5 pl-5 pr-5 mb-0">
-          <img src="static/logo.png" height=40 />
+          <img src="static/login.png" height=40 />
         </div>
 
         <v-card-title  class="pl-5 pr-5">
