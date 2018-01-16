@@ -19,6 +19,10 @@ export const SET_GENERIC = 'SET_GENERIC'
 // Security
 export const LOG_IN = 'LOG_IN'
 export const LOG_OUT = 'LOG_OUT'
+export const SET_REDIRECT_URL = 'SET_REDIRECT_URL'
+export const SET_USERNAME = 'SET_USERNAME'
+export const SET_EMAIL = 'SET_EMAIL'
+export const SET_FIRST_NAME = 'SET_FIRST_NAME'
 
 // Notifications
 export const SHOW_SNACKBAR = 'SHOW_SNACKBAR'

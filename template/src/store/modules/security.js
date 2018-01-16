@@ -1,14 +1,21 @@
 import * as types from '../mutation-types'
-import { $router } from '../../main'
 
 // initial state
 const state = {
-  loggedIn: false
+  loggedIn: false,
+  username: null,
+  firstName: null,
+  redirectUrl: null,
+  email: null
 }
 
 // getters
 const getters = {
-  isLoggedIn: state => state.loggedIn
+  isLoggedIn: state => state.loggedIn,
+  redirectUrl: state => state.redirectUrl,
+  username: state => state.username,
+  email: state => state.email,
+  firstName: state => state.firstName
 }
 
 // actions
@@ -18,6 +25,18 @@ const actions = {
   },
   logOut ({ commit }) {
     commit(types.LOG_OUT)
+  },
+  setRedirectUrl ({ commit }, url) {
+    commit(types.SET_REDIRECT_URL, url)
+  },
+  setUsername ({ commit }, username) {
+    commit(types.SET_USERNAME, username)
+  },
+  setEmail ({ commit }, email) {
+    commit(types.SET_EMAIL, email)
+  },
+  setFirstName ({ commit }, firstName) {
+    commit(types.SET_FIRST_NAME, firstName)
   }
 }
 
@@ -28,8 +47,18 @@ const mutations = {
   },
   [types.LOG_OUT] (state) {
     state.loggedIn = false
-    this._vm.$cookies.remove('token')
-    $router.go('/')
+  },
+  [types.SET_REDIRECT_URL] (state, url) {
+    state.redirectUrl = url
+  },
+  [types.SET_USERNAME] (state, username) {
+    state.username = username
+  },
+  [types.SET_EMAIL] (state, email) {
+    state.email = email
+  },
+  [types.SET_FIRST_NAME] (state, firstName) {
+    state.firstName = firstName
   }
 }
 
