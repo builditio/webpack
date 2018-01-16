@@ -48,7 +48,7 @@ export default {
       'closeNavigator',
       'openSettings'
     ]),
-    trackChange(e) {
+    trackChange (e) {
       if (this.navigatorVisible === true && e === false) {
         this.closeNavigator()
       }

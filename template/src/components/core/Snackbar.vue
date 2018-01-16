@@ -2,7 +2,7 @@
   <v-snackbar
     bottom
     multi-line
-    v-model="isSnackbarVisible",
+    v-model="isSnackbarVisible"
     :color='snackbarColor'
   >
     \{{ snackbarText }}
