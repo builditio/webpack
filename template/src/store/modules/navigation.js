@@ -4,7 +4,7 @@ import * as types from '../mutation-types'
 const state = {
   title: 'Application Title',
   titleDefault: 'Application Title',
-  theme: 'error'
+  theme: 'blue darken-1'
 }
 
 // getters

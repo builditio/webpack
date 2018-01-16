@@ -1,7 +1,7 @@
 <template>
 <v-container class="fill-height">
   <v-layout row align-center>
-    <v-flex md6 offset-md3>
+    <v-flex xs12 sm8 offset-sm2 md6 offset-md3 lg4 offset-lg4>
 
       <v-card>
         <v-progress-linear :indeterminate="inProgress"></v-progress-linear>

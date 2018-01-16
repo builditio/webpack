@@ -2,7 +2,7 @@ import * as types from '../mutation-types'
 
 // initial state
 const state = {
-  navigatorVisible: false,
+  navigatorVisible: null,
   chooserVisible: false,
   settingsVisible: false
 }

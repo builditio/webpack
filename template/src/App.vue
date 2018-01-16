@@ -1,8 +1,8 @@
 <template>
 <v-app>
-  <navigator  v-if="isLoggedIn" />
+  <navigator v-if="isLoggedIn" />
   <app-bar v-if="isLoggedIn" />
-  <v-content>
+  <v-content :class="contentClass" class="grey lighten-4">
     <router-view></router-view>
   </v-content>
   <snackbar />
@@ -27,13 +27,16 @@ export default {
   computed: {
     ...mapGetters({
       isLoggedIn: 'isLoggedIn'
-    })
+    }),
+    contentClass () {
+      return (this.isLoggedIn ? '' : 'login')
+    }
   }
 }
 </script>
 
 <style>
-.application.theme--light {
+.login {
   background: url(/static/bkgd.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;

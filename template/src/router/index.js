@@ -57,23 +57,23 @@ var router = new Router({
  * sign-in route, otherwise it will pass-through to the originally
  * requested route.
  */
-router.beforeEach((to, from, next) => {
-  var options = {}
-  if (to.meta.requiresAuth !== false) {
-    console.log(store)
-    // if (!store.getters.isLoggedIn) {
-    options = {path: '/'}
-    // }
-  }
+ router.beforeEach((to, from, next) => {
+   var options = {}
+   if (to.meta.requiresAuth === true || to.meta.requiresAuth === undefined) {
+     // reroute to login if they are not logged in already
+     if (!store.getters.isLoggedIn) {
+       options = {path: '/'}
+     }
+   }
 
-  var username = store.getters.username
-  if (to.meta.requiresUser === true) {
-    if (username === null || username === null) {
-      options = {path: '/'}
-    }
-  }
+   var username = store.getters.username
+   if (to.meta.requiresUser === true) {
+     if (username === null || username === null) {
+       options = {path: '/'}
+     }
+   }
 
-  next(options)
-})
+   next(options)
+ })
 
 export default router
