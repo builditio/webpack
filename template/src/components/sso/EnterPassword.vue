@@ -11,12 +11,12 @@
         <v-card-title  class="pl-5 pr-5">
 
           <div>
-            <h3 class="headline mb-1">Welcome {{ firstName }},</h3>
+            <h3 class="headline mb-1">Welcome \{{ firstName }},</h3>
             <div  style="min-height: 36px;"><v-avatar size="28px" slot="activator">
               <img src="https://avatars3.githubusercontent.com/u/91428?s=460&v=4" alt="">
             </v-avatar>
             <span class="pl-2">
-              {{ email }}
+              \{{ email }}
             </span>
             </div>
           </div>
