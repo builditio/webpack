@@ -11,11 +11,22 @@
     <v-btn icon @click="sayHello()">
       <v-icon>notifications</v-icon>
     </v-btn>
-    <v-btn icon>
-      <v-avatar size="36px">
-        <img src="https://avatars3.githubusercontent.com/u/91428?s=460&v=4" alt="">
-      </v-avatar>
-    </v-btn>
+    <v-menu bottom left>
+      <v-btn icon slot="activator">
+        <v-avatar size="36px">
+          <img src="https://avatars3.githubusercontent.com/u/91428?s=460&v=4" alt="">
+        </v-avatar>
+      </v-btn>
+      <v-list dense>
+        <v-list-tile @click="logOut">
+          <v-list-tile-title>Settings</v-list-tile-title>
+        </v-list-tile>
+        <v-divider />
+        <v-list-tile @click="">
+          <v-list-tile-title>Sign Out</v-list-tile-title>
+        </v-list-tile>
+      </v-list>
+    </v-menu>
   </div>
 </v-toolbar>
 </template>

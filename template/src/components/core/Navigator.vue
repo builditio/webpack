@@ -1,6 +1,6 @@
 <template>
 <v-navigation-drawer fixed :clipped="$vuetify.breakpoint.width > 1264" app v-model="visibility" @input="trackChange" class="grey lighten-4">
-  <v-list style="padding-top: 10px">
+  <v-list dense style="padding-top: 10px">
 
     <!-- Menu option 1 -->
     <v-list-tile @click="$router.push({name: 'SampleOne'})">
@@ -8,7 +8,7 @@
         <v-icon>dashboard</v-icon>
       </v-list-tile-action>
       <v-list-tile-content>
-        <v-list-tile-title>
+        <v-list-tile-title class="grey--text">
           Menu option one
         </v-list-tile-title>
       </v-list-tile-content>
@@ -20,8 +20,34 @@
         <v-icon>replay</v-icon>
       </v-list-tile-action>
       <v-list-tile-content>
-        <v-list-tile-title>
+        <v-list-tile-title class="grey--text">
           Menu option two
+        </v-list-tile-title>
+      </v-list-tile-content>
+    </v-list-tile>
+
+    <v-divider dark />
+
+    <!-- Menu option 3 -->
+    <v-list-tile @click="$router.push({name: 'SampleOne'})">
+      <v-list-tile-action>
+        <v-icon>dashboard</v-icon>
+      </v-list-tile-action>
+      <v-list-tile-content>
+        <v-list-tile-title class="grey--text">
+          Menu option three
+        </v-list-tile-title>
+      </v-list-tile-content>
+    </v-list-tile>
+
+    <!-- Menu option 4 -->
+    <v-list-tile @click="$router.push({name: 'SampleTwo'})">
+      <v-list-tile-action>
+        <v-icon>replay</v-icon>
+      </v-list-tile-action>
+      <v-list-tile-content>
+        <v-list-tile-title class="grey--text">
+          Menu option four
         </v-list-tile-title>
       </v-list-tile-content>
     </v-list-tile>
