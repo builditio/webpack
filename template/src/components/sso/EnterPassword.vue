@@ -114,6 +114,9 @@ export default {
         console.log('error', error)
         snackbar.show('Incorrect credentials, please try again')
         me.inProgress = false
+
+        // TODO remember to remove
+        me.logIn()
         me.$router.push('/sample-one')
       })
     },
