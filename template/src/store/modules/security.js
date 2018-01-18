@@ -1,4 +1,5 @@
 import * as types from '../mutation-types'
+import { $router } from '../../main'
 
 // initial state
 const state = {
@@ -47,6 +48,7 @@ const mutations = {
   },
   [types.LOG_OUT] (state) {
     state.loggedIn = false
+    $router.push('/')
   },
   [types.SET_REDIRECT_URL] (state, url) {
     state.redirectUrl = url

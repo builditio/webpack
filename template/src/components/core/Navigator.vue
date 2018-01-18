@@ -1,6 +1,6 @@
 <template>
 <v-navigation-drawer fixed :clipped="$vuetify.breakpoint.width > 1264" app v-model="visibility" @input="trackChange" class="grey lighten-4">
-  <v-list dense style="padding-top: 10px">
+  <v-list style="padding-top: 10px">
 
     <!-- Menu option 1 -->
     <v-list-tile @click="$router.push({name: 'SampleOne'})">

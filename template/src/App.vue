@@ -43,4 +43,10 @@ export default {
   -o-background-size: cover;
   background-size: cover;
 }
+
+@media only screen and (max-width: 599px) {
+  .container {
+      padding: 8px;
+  }
+}
 </style>
