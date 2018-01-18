@@ -8,7 +8,7 @@
     <v-btn icon>
       <v-icon>apps</v-icon>
     </v-btn>
-    <v-btn icon @click="sayHello()">
+    <v-btn icon @click="sayHello">
       <v-icon>notifications</v-icon>
     </v-btn>
     <v-menu bottom left>
@@ -22,7 +22,7 @@
           <v-list-tile-title>Settings</v-list-tile-title>
         </v-list-tile>
         <v-divider />
-        <v-list-tile @click="">
+        <v-list-tile @click="logOut">
           <v-list-tile-title>Sign Out</v-list-tile-title>
         </v-list-tile>
       </v-list>
