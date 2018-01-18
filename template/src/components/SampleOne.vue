@@ -67,7 +67,9 @@
 export default {
   name: 'sample-one',
   data () {
-    return {}
+    return {
+      show: false
+    }
   }
 }
 </script>
